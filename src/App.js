@@ -25,7 +25,7 @@ function App() {
           framesPerSecond={24}
           loop={true}
         /> */}
-        <p>
+        <p> 
           Bander
         </p>
         {/* <a
