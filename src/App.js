@@ -11,7 +11,7 @@ import './App.css';
 //   require('./images/micro2.svg'),
 //   require('./images/saxophone.svg'),
 //   require('./images/violin.svg')
-// ]
+// ] 
 // const centerIndex = Math.round(images.length / 2);
 function App() {
   return (
