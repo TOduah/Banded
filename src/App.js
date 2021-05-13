@@ -12,7 +12,7 @@ import './App.css';
 //   require('./images/saxophone.svg'),
 //   require('./images/violin.svg')
 // ]
-const centerIndex = Math.round(images.length / 2);
+// const centerIndex = Math.round(images.length / 2);
 function App() {
   return (
     <div className="App">
