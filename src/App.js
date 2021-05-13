@@ -1,6 +1,6 @@
 import trumpet from './images/trumpet.svg';
 import './App.css';
-import ImageSequence from 'react-native-image-sequence-2';
+import ImageSequence from 'react-native-image-sequence';
 
 const images = [
   require('./images/trumpet.svg'),
