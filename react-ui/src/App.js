@@ -1,7 +1,7 @@
 import trumpet from './images/trumpet.svg';
 import './App.css';
 
-const centerIndex = Math.round(images.length / 2);
+
 function App() {
   return (
     <div className="App">
