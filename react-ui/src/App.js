@@ -19,33 +19,33 @@ function App() {
     config: config.molasses,
   })
   useEffect(() => void setInterval(() => set(state => (state + 1) % 4), 2000), [])
-  // return (
-  //   <div className="App">
-  //     <header className="App-header">
-  //       <img src={trumpet} className="App-logo" alt="logo" />
-  //       <p> 
-  //         Bander
-  //       </p>
-  //       {/* <a
-  //         className="App-link"
-  //         href="https://reactjs.org"
-  //         target="_blank"
-  //         rel="noopener noreferrer"
-  //       >
-  //         Learn React
-  //       </a> */}
-  //     </header>
-  //   </div>
-  // );
-  return transitions.map(({ item, props, key }) => (
+  return (
+    <div className="App">
+      <header className="App-header">
+        <img src={trumpet} className="App-logo" alt="logo" />
+        <p> 
+          Bander
+        </p>
+        {/* <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a> */}
+      </header>
+    </div>
+  );
+  // return transitions.map(({ item, props, key }) => (
     
-    <animated.div
-    key={key}
-    class="App-logo"
-    style={{ ...props, backgroundImage: `url(${item.url})` }}
-  />
+  //   <animated.div
+  //   key={key}
+  //   class="App-logo"
+  //   style={{ ...props, backgroundImage: `url(${item.url})` }}
+  // />
     
-  ));
+  // ));
 }
 
 export default App;
