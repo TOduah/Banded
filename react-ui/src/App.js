@@ -42,7 +42,7 @@ function App() {
     <animated.div
     key={key}
     class="App-logo"
-    style={{ ...props, backgroundImage: `${item.url}` }}
+    style={{ ...props, backgroundImage: `url(${item.url})` }}
   />
     
   ));
