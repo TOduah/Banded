@@ -42,12 +42,12 @@ function App() {
       // key={key}
       <div className="App">
         key={key}
-  //     <header className="App-header">
-  //       <img src={item.url} className="App-logo" alt="logo" />
-  //       <p> 
-  //         Bander
-  //       </p>
-  //       {/* <a
+       <header className="App-header">
+         <img src={item.url} className="App-logo" alt="logo" />
+         <p> 
+           Bander
+         </p>
+         {/* <a
   //         className="App-link"
   //         href="https://reactjs.org"
   //         target="_blank"
@@ -55,8 +55,8 @@ function App() {
   //       >
   //         Learn React
   //       </a> */}
-  //     </header>
-  //   </div>
+       </header>
+     </div>
       // class="bg"
       // style={{ ...props, backgroundImage: `url(https://images.unsplash.com/${item.url}&auto=format&fit=crop)` }}
     
