@@ -39,26 +39,11 @@ function App() {
   // );
   return transitions.map(({ item, props, key }) => (
     
-      // key={key}
-      <div className="App">
-        key={key}
-       <header className="App-header">
-         <img src={item.url} className="App-logo" alt="logo" />
-         <p> 
-           Bander
-         </p>
-         {/* <a
-  //         className="App-link"
-  //         href="https://reactjs.org"
-  //         target="_blank"
-  //         rel="noopener noreferrer"
-  //       >
-  //         Learn React
-  //       </a> */}
-       </header>
-     </div>
-      // class="bg"
-      // style={{ ...props, backgroundImage: `url(https://images.unsplash.com/${item.url}&auto=format&fit=crop)` }}
+    <animated.div
+    key={key}
+    class="App-logo"
+    style={{ ...props, backgroundImage: `${item.url}` }}
+  />
     
   ));
 }
