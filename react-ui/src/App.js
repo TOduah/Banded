@@ -1,5 +1,6 @@
 import trumpet from './images/trumpet.svg';
 import './App.css';
+import React, { useState, useEffect } from 'react'
 import { useTransition, animated, config } from 'react-spring'
 
 const slides = [
