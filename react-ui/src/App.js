@@ -48,7 +48,7 @@ function App() {
         </a> */}
       </header>
       <Helmet>
-          <script src="./components/slide.js" type="text/javascript"></script>
+          <script src="./components/slide.js" type="text/javascript"/>
       
           <script>
             
