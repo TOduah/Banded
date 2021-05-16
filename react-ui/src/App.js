@@ -20,7 +20,7 @@ function App() {
           <img src={trumpet} className="App-logo" alt="logo" />
           <img src={bass_drum} className="App-logo" alt="logo" />
           <img src={guitar} className="App-logo" alt="logo" />
-          <img src={saxophone} className="App-logo" alt="logo" />
+          {/* <img src={saxophone} className="App-logo" alt="logo" /> */}
         </div>
         <div>
           <p> 
