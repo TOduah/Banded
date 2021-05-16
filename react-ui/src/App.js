@@ -4,26 +4,11 @@ import guitar from './images/guitar.svg';
 import saxophone from './images/saxophone.svg';
 import './App.css';
 import React, { useState, useEffect } from 'react'
+import useScript from './hooks/useScript';
 
-
-// import { useTransition, animated, config } from 'react-spring'
-
-// const slides = [
-//   { id: 0, url: './images/trumpet.svg' },
-//   { id: 1, url: './images/bass_drum.svg' },
-//   { id: 2, url: './images/clarinet.svg' },
-//   { id: 3, url: './images/french_horn.svg' },
-// ]
 
 function App() {
-  // const [index, set] = useState(0)
-  // const transitions = useTransition(slides[index], item => item.id, {
-  //   from: { opacity: 0 },
-  //   enter: { opacity: 1 },
-  //   leave: { opacity: 0 },
-  //   config: config.molasses,
-  // })
-  // useEffect(() => void setInterval(() => set(state => (state + 1) % 4), 2000), [])
+  useScript('./components/slide.js');
   return (
     <div className="App"> 
       <header className="App-header" >
