@@ -1,7 +1,7 @@
 import trumpet from './images/trumpet.svg';
 import bass_drum from './images/bass_drum.svg';
-import clarinet from './images/clarinet.svg';
-import french_horn from './images/french_horn.svg';
+import guiatr from './images/guitar.svg';
+import saxophone from './images/saxophone.svg';
 import './App.css';
 import React, { useState, useEffect } from 'react'
 // import { useTransition, animated, config } from 'react-spring'
@@ -28,8 +28,8 @@ function App() {
         <div id="Fader">
           <img src={trumpet} className="App-logo" alt="logo" />
           <img src={bass_drum} className="App-logo" alt="logo" />
-          <img src={clarinet} className="App-logo" alt="logo" />
-          <img src={french_horn} className="App-logo" alt="logo" />
+          <img src={guitar} className="App-logo" alt="logo" />
+          <img src={saxophone} className="App-logo" alt="logo" />
         </div>
         <div>
           <p> 
