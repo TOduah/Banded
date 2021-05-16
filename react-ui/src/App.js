@@ -12,7 +12,7 @@ function App() {
   return (
     <div className="App"> 
       <Helmet>
-        <script src="./components/slide.js" type="text/babel" />
+        <script src="./components/slide.js" type="text/jsx" />
       </Helmet>
 
       <header className="App-header" >
