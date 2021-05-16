@@ -24,11 +24,11 @@ function App() {
   // useEffect(() => void setInterval(() => set(state => (state + 1) % 4), 2000), [])
   return (
     <div className="App"> 
-      <header className="App-header" id="Fader">
-        <img src={trumpet} className="App-logo" alt="logo" />
-        <img src={bass_drum} className="App-logo" alt="logo" />
-        <img src={clarinet} className="App-logo" alt="logo" />
-        <img src={french_horn} className="App-logo" alt="logo" />
+      <header className="App-header" id="Fader" className="App-logo">
+        <img src={trumpet} alt="logo" />
+        <img src={bass_drum} alt="logo" />
+        <img src={clarinet} alt="logo" />
+        <img src={french_horn} alt="logo" />
         <p> 
           Bander
         </p>
