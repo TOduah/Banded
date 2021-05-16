@@ -17,10 +17,10 @@ function App() {
 
       <header className="App-header" >
         <div id="Fader">
-          <img src={trumpet} className="App-logo" alt="logo" />
-          <img src={bass_drum} className="App-logo" alt="logo" />
-          <img src={guitar} className="App-logo" alt="logo" />
-          <img src={saxophone} className="App-logo" alt="logo" />
+          <img src={trumpet} class="App-logo" alt="logo" />
+          <img src={bass_drum} class="App-logo" alt="logo" />
+          <img src={guitar} class="App-logo" alt="logo" />
+          <img src={saxophone} class="App-logo" alt="logo" />
         </div>
         <div>
           <p> 
