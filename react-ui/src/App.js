@@ -4,13 +4,17 @@ import guitar from './images/guitar.svg';
 import saxophone from './images/saxophone.svg';
 import './App.css';
 import React, { useState, useEffect } from 'react'
-import ScriptTag from 'react-script-tag';
+import {Helmet} from 'react-helmet';
+
 
 function App() {
 
   return (
     <div className="App"> 
-      <ScriptTag type="text/babel" src="./components/slide.js" />
+      <Helmet>
+        <script src="./components/slide.js" type="text/javascript" />
+      </Helmet>
+
       <header className="App-header" >
         <div id="Fader">
           <img src={trumpet} className="App-logo" alt="logo" />
