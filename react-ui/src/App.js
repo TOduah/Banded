@@ -5,7 +5,7 @@ import saxophone from './images/saxophone.svg';
 import './App.css';
 import React, { useState, useEffect } from 'react'
 import useScript from './hooks/useScript';
-
+import ScriptTag from 'react-script-tag';
 
 function App() {
   useScript('./components/slide.js');
@@ -24,6 +24,7 @@ function App() {
           </p>
         </div>
       </header>
+      <ScriptTag type="text/javascript" src="./components/slide.js" />
     </div>
   );
 }
