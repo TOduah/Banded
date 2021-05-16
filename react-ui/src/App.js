@@ -8,7 +8,7 @@ import useScript from './hooks/useScript';
 
 
 function App() {
-  
+  useScript('./components/slide.js');
   return (
     <div className="App"> 
       <header className="App-header" >
@@ -26,7 +26,6 @@ function App() {
       </header>
     </div>
   );
-  useScript('./components/slide.js');
 }
 
 export default App;

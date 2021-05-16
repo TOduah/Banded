@@ -3,7 +3,7 @@ showSlides();
 
 function showSlides() {
   var i;
-  var slides = document.getElementsByClassName("App-logo");
+  var slides = document.querySelectorAll(".App-logo");
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";  
   }
@@ -13,4 +13,4 @@ function showSlides() {
   slides[slideIndex-1].style.display = "block";  
 
   setTimeout(showSlides, 8000); 
-}
+} 
