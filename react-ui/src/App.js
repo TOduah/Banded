@@ -51,10 +51,10 @@ function App() {
           <script src="./components/slide.js" type="text/javascript"></script>
       
           <script>
-            {`
+            
               var slideIndex = 0;
               showSlides();
-            `}
+            
           </script>
       </Helmet>
     </div>
