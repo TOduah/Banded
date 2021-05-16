@@ -7,18 +7,15 @@
   pointer-events: none;
 }
 
-div {
-  display: block;
-}
 
-@media (prefers-reduced-motion: no-preference) {
+/* @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 10s linear;
   }
   /* #Fader {
     animation: Fade-in-out infinite 7s linear;
-  } */
-}
+  }
+} */
 
 .App-header {
   background-color: #575d69;
