@@ -1,6 +1,7 @@
 var slideIndex = 0;
-showSlides();
 console.log("hello");
+showSlides();
+
 function showSlides() {
   var i;
   var slides = document.querySelectorAll(".App-logo");
