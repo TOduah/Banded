@@ -10,7 +10,6 @@
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 10s linear;
-    
   }
   /* #Fader {
     animation: Fade-in-out infinite 7s linear;
@@ -98,4 +97,11 @@
 }
 #Fader img:nth-of-type(4) {
   animation-delay: 0;
+}
+
+#fader img {
+  animation-name: App-logo-spin;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-duration: 8s;
 }
