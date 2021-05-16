@@ -1,5 +1,4 @@
 var slideIndex = 0;
-console.log("hello");
 showSlides();
 
 function showSlides() {
