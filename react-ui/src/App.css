@@ -65,9 +65,9 @@
 #Fader img:nth-of-type(3) {
   animation-delay: 2s;
 }
-#Fader img:nth-of-type(4) {
+/* #Fader img:nth-of-type(4) {
   animation-delay: 0;
-}
+} */
 
 #Fader img {
   animation-name: App-logo-spin;
