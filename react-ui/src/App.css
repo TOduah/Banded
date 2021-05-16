@@ -74,6 +74,19 @@
   }
 } */
 
+#App-header img:nth-of-type(1) {
+  animation-delay: 6s;
+}
+#App-header img:nth-of-type(2) {
+  animation-delay: 4s;
+}
+#App-header img:nth-of-type(3) {
+  animation-delay: 2s;
+}
+#App-header img:nth-of-type(4) {
+  animation-delay: 0;
+}
+
 #Fader img:nth-of-type(1) {
   animation-delay: 6s;
 }
