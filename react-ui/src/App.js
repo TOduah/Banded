@@ -8,7 +8,7 @@ import useScript from './hooks/useScript';
 
 
 function App() {
-  useScript('./components/slide.js');
+  
   return (
     <div className="App"> 
       <header className="App-header" >
@@ -23,26 +23,10 @@ function App() {
             Bander
           </p>
         </div>
-        {/* <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a> */}
       </header>
     </div>
   );
-  // return transitions.map(({ item, props, key }) => (
-    
-  //   <animated.div
-  //   key={key}
-  //   class="App-logo"
-  //   style={{ ...props, backgroundImage: `url(${item.url})` }}
-  // />
-    
-  // ));
+  useScript('./components/slide.js');
 }
 
 export default App;
