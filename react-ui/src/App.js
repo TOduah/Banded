@@ -14,8 +14,14 @@ function App() {
       <header className="App-header" >
         <div id="Fader">
           <img src={trumpet} className="App-logo" alt="logo" />
+        </div>
+        <div id="Fader">
           <img src={bass_drum} className="App-logo" alt="logo" />
+        </div>
+        <div id="Fader">
           <img src={guitar} className="App-logo" alt="logo" />
+        </div>
+        <div id="Fader">
           <img src={saxophone} className="App-logo" alt="logo" />
         </div>
         <div>
