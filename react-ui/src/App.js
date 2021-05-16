@@ -11,6 +11,7 @@ function App() {
   useScript('./components/slide.js');
   return (
     <div className="App"> 
+      <ScriptTag type="text/javascript" src="./components/slide.js" />
       <header className="App-header" >
         <div id="Fader">
           <img src={trumpet} className="App-logo" alt="logo" />
@@ -24,7 +25,6 @@ function App() {
           </p>
         </div>
       </header>
-      <ScriptTag type="text/javascript" src="./components/slide.js" />
     </div>
   );
 }
