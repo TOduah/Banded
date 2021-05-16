@@ -4,7 +4,7 @@ import guitar from './images/guitar.svg';
 import saxophone from './images/saxophone.svg';
 import './App.css';
 import React, { useState, useEffect } from 'react'
-import {Helmet} from "react-helmet";
+
 
 // import { useTransition, animated, config } from 'react-spring'
 
@@ -47,16 +47,6 @@ function App() {
           Learn React
         </a> */}
       </header>
-      <Helmet>
-          <script src="./components/slide.js" type="text/javascript"/>
-      
-          <script>
-            
-              var slideIndex = 0;
-              showSlides();
-            
-          </script>
-      </Helmet>
     </div>
   );
   // return transitions.map(({ item, props, key }) => (
