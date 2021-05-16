@@ -48,7 +48,14 @@ function App() {
         </a> */}
       </header>
       <Helmet>
-          <script src="./components/slide.js"></script>
+          <script src="./components/slide.js" type="text/javascript"></script>
+      
+          <script>
+            {`
+              var slideIndex = 0;
+              showSlides();
+            `}
+          </script>
       </Helmet>
     </div>
   );
