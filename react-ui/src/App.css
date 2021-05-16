@@ -105,3 +105,9 @@
   animation-iteration-count: infinite;
   animation-duration: 8s;
 }
+#App-header img {
+  animation-name: App-logo-spin;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-duration: 8s;
+}
