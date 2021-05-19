@@ -32,7 +32,7 @@ function App() {
         <Helmet>
         <script src="./components/slide.js" type="text/jsx" />
       </Helmet>
-      {/* <script>
+      <script>
         {
           `var slideIndex = 0;
           showSlides();
@@ -51,7 +51,7 @@ function App() {
             setTimeout(showSlides, 8000); 
           } `
         }
-      </script> */}
+      </script>
       </header>
     </div>
   );
