@@ -56,7 +56,9 @@ class App extends Component {
     //   this.plusDivs(), 4000);
     // {interval()}
     return (
+      
       <div className="App"> 
+      {setTimeout(() => this.plusDivs(), 4000)}
         {/* <Helmet>
           <script src="./components/slide.js" type="text/jsx" />
         </Helmet> */}
@@ -69,7 +71,7 @@ class App extends Component {
           <div className="Slide-container">
             <div className="slide Fader">
               <img src={images[slideIndex]} className="App-logo" alt="logo" />
-              {setTimeout(() => this.plusDivs(), 3000)}
+              {/* {setTimeout(() => this.plusDivs(), 4000)} */}
               {/* <button onClick={() => this.plusDivs(1)}>Next</button> */}
             </div>
             {/* <div className="slide Fader">
