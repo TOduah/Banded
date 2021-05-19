@@ -32,7 +32,7 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
+/* @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
@@ -54,7 +54,7 @@
   100% {
     opacity:1;
   }
-}
+} */
 
 /* #Fader img:nth-of-type(1) {
   animation-delay: 4s;
@@ -69,11 +69,18 @@
   animation-delay: 0;
 } */
 
-.Fader img {
-  animation-name: App-logo-spin;
+
+.Fader {
+  /* animation-name: App-logo-spin; */
+  animation-name: Fader;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
-  animation-duration: 6s;
+  animation-duration: 3s;
+}
+
+@keyframes Fader {
+  from {opacity: .4;}
+  to {opacity: 1;}
 }
 
 /* @keyframes Fade-in-out {
