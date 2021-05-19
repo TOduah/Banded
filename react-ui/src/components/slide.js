@@ -3,7 +3,7 @@ showSlides();
 
 function showSlides() {
   var i;
-  var slides = document.querySelectorAll(".App-logo");
+  var slides = document.querySelectorAll(".slide");
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";  
   }
