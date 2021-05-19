@@ -19,7 +19,6 @@ import React from 'react';
 
 export default function showSlides() {
   var slideIndex = 0
-  console.log("yes")
   var i;
   var slides = document.querySelectorAll(".slide");
   for (i = 0; i < slides.length; i++) {
