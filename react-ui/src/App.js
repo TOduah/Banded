@@ -22,9 +22,15 @@ function App() {
           </p>
         </div>
         <div id="Fader">
-          <img src={trumpet} className="App-logo" alt="logo" />
-          <img src={bass_drum} className="App-logo" alt="logo" />
-          <img src={guitar} className="App-logo" alt="logo" />
+          <div class="slide">
+            <img src={trumpet} className="App-logo" alt="logo" />
+          </div>
+          <div class="slide">
+            <img src={bass_drum} className="App-logo" alt="logo" />
+          </div>
+          <div class="slide">
+            <img src={guitar} className="App-logo" alt="logo" />
+          </div>
           {/* <img src={saxophone} className="App-logo" alt="logo" /> */}
         </div>
       </header>
