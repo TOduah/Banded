@@ -69,7 +69,7 @@
   animation-delay: 0;
 } */
 
-#Fader img {
+.Fader img {
   animation-name: App-logo-spin;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
