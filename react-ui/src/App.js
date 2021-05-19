@@ -36,6 +36,7 @@ function App() {
         {
           `var slideIndex = 0;
           showSlides();
+          console.log("Hello");
           
           function showSlides() {
             var i;
