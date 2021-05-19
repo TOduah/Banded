@@ -5,10 +5,11 @@ import saxophone from './images/saxophone.svg';
 import './App.css';
 import React, { useState, useEffect } from 'react'
 import {Helmet} from 'react-helmet';
+import { useScript } from './hooks/useScript.js';
 
 
 function App() {
-
+  useScript("./components/slide.js");
   return (
     <div className="App"> 
       <Helmet>
