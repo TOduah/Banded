@@ -21,7 +21,7 @@ function App() {
         <script src="./components/slide.js" type="text/jsx" />
       </Helmet>
       </header>
-      <body onload="showSlides();">
+      <body onload="showSlides();" className="App-body">
         <div className="Slide-container">
           <div className="slide Fader">
             <img src={trumpet} className="App-logo" alt="logo" />
