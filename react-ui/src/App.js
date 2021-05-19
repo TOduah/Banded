@@ -11,10 +11,6 @@ function App() {
 
   return (
     <div className="App"> 
-      <Helmet>
-        <script src="./components/slide.js" type="text/jsx" />
-      </Helmet>
-
       <header className="App-header" >
         <div>
           <p> 
@@ -33,6 +29,9 @@ function App() {
           </div>
           {/* <img src={saxophone} className="App-logo" alt="logo" /> */}
         </div>
+        <Helmet>
+        <script src="./components/slide.js" type="text/jsx" />
+      </Helmet>
       </header>
     </div>
   );
