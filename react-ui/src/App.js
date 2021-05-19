@@ -25,7 +25,7 @@ class App extends Component {
     };
   }
 
-   pludDivs(n) {
+   plusDivs(n) {
     const { images } = this.state;
     if (n > images.length) {
       this.setState({ slideIndex: 1 });
