@@ -53,9 +53,9 @@ class App extends Component {
   render(){
     const { images, slideIndex } = this.state;
     var interval = window.setInterval(function(){
-      plusDivs(1)
+      this.plusDivs(1)
     }, 4000);
-    interval();
+    // {interval()}
     return (
       <div className="App"> 
         {/* <Helmet>
@@ -70,6 +70,7 @@ class App extends Component {
           <div className="Slide-container">
             <div className="slide Fader">
               <img src={images[slideIndex]} className="App-logo" alt="logo" />
+              {interval()}
               {/* <button onClick={() => this.plusDivs(1)}>Next</button> */}
             </div>
             {/* <div className="slide Fader">
