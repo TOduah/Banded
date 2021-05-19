@@ -27,10 +27,12 @@ function App() {
       <div className="App"> 
       {/* {setTimeout(() => this.plusDivs(), 4000)} */}
       <div>
-            <nav className="navbar navbar-expand navbar-dark bg-dark">
+            <nav className="navbar navbar-expand navbar-dark bg-dark" expand="lg">
+              <div class="row">
               <a href="/" className="navbar-brand">
                 Bander
               </a>
+              </div>
               <div className="navbar-nav mr-auto">
                 <li className="nav-item">
                   <Link to={"/home"} className="nav-link">
