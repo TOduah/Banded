@@ -16,16 +16,16 @@ function App() {
       </Helmet>
 
       <header className="App-header" >
+        <div>
+          <p> 
+            Bander
+          </p>
+        </div>
         <div id="Fader">
           <img src={trumpet} className="App-logo" alt="logo" />
           <img src={bass_drum} className="App-logo" alt="logo" />
           <img src={guitar} className="App-logo" alt="logo" />
           {/* <img src={saxophone} className="App-logo" alt="logo" /> */}
-        </div>
-        <div>
-          <p> 
-            Bander
-          </p>
         </div>
       </header>
     </div>
