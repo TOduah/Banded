@@ -25,9 +25,9 @@ class App extends Component {
     };
   }
 
-  plusDivs(n) {
+  plusDivs() {
     const { images, slideIndex } = this.state;
-    if(n<0){
+    // if(n<0){
       if(slideIndex>0){
         this.setState((prevState)=>({
           slideIndex : prevState.slideIndex - 1
@@ -37,7 +37,7 @@ class App extends Component {
           slideIndex:images.length-1
         }))
       }
-    }
+    // }
     if(n>0){
       if(slideIndex<images.length-1){
         this.setState((prevState)=>({
@@ -53,7 +53,7 @@ class App extends Component {
   render(){
     const { images, slideIndex } = this.state;
     window.setInterval(function(){
-      this.plusDivs(1)
+      this.plusDivs.bind(this)
     }, 4000);
     // {interval()}
     return (
