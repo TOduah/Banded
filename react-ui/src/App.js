@@ -38,17 +38,17 @@ class App extends Component {
         }))
       }
     // }
-    if(n>0){
-      if(slideIndex<images.length-1){
-        this.setState((prevState)=>({
-          slideIndex : prevState.slideIndex +1
-        }))
-      } else {
-        this.setState(()=>({
-          slideIndex : 0
-        }))
-      }
-    }
+    // if(n>0){
+    //   if(slideIndex<images.length-1){
+    //     this.setState((prevState)=>({
+    //       slideIndex : prevState.slideIndex +1
+    //     }))
+    //   } else {
+    //     this.setState(()=>({
+    //       slideIndex : 0
+    //     }))
+    //   }
+    // }
   }
   render(){
     const { images, slideIndex } = this.state;
