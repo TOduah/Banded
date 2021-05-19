@@ -54,7 +54,7 @@ function App() {
           </div>
           <div className="Slide-container">
             <div className="slide Fader">
-              <img src={images[slideIndex]} className="App-logo" alt="logo" />
+              <img src={trumpet} className="App-logo" alt="logo" />
               {/* {setTimeout(() => this.plusDivs(), 4000)} */}
               {/* <button onClick={() => this.plusDivs(1)}>Next</button> */}
             </div>
