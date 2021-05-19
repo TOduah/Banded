@@ -35,7 +35,6 @@ function App() {
           </div>
           {/* <img src={saxophone} className="App-logo" alt="logo" /> */}
         </div>
-        {slideIndex}
         {showSlides()}
       </header>
     </div>
