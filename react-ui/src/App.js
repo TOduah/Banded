@@ -21,7 +21,7 @@ class App extends Component {
         trumpet,
         bass_drum,
         guitar
-      ]
+      ] 
     };
   }
 
@@ -35,7 +35,7 @@ class App extends Component {
     }
   }
   render(){
-    const { images, slideIndex} = this.state;
+    const { images, slideIndex } = this.state;
     return (
       <div className="App"> 
         {/* <Helmet>
@@ -50,8 +50,8 @@ class App extends Component {
           <div className="Slide-container">
             <div className="slide Fader">
               <img src={images[slideIndex]} className="App-logo" alt="logo" />
-              <button onClick={() => plusDivs(1)}>Next</button>
-              <button onClick={() => plusDivs(-1)}>Previous</button>
+              <button onClick={() => this.plusDivs(1)}>Next</button>
+              <button onClick={() => this.plusDivs(-1)}>Previous</button>
             </div>
             {/* <div className="slide Fader">
               <img src={bass_drum} className="App-logo" alt="logo" />
