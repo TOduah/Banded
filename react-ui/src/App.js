@@ -21,18 +21,18 @@ function App() {
             Bander
           </p>
         </div>
-        <div id="Fader">
-          <div class="slide">
+        {/* <div id="Fader"> */}
+          <div class="slide Fader">
             <img src={trumpet} className="App-logo" alt="logo" />
           </div>
-          <div class="slide">
+          <div class="slide Fader">
             <img src={bass_drum} className="App-logo" alt="logo" />
           </div>
-          <div class="slide">
+          <div class="slide Fader">
             <img src={guitar} className="App-logo" alt="logo" />
           </div>
           {/* <img src={saxophone} className="App-logo" alt="logo" /> */}
-        </div>
+        {/* </div> */}
       </header>
     </div>
   );
