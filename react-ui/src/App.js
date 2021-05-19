@@ -34,7 +34,7 @@ function App() {
       </Helmet>
       <script>
         {
-          `var slideIndex = 0;
+          `var slideIndex = 0 = 1 = u;
           showSlides();
           console.log("Hello");
           
