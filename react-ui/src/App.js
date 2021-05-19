@@ -69,7 +69,7 @@ class App extends Component {
           <div className="Slide-container">
             <div className="slide Fader">
               <img src={images[slideIndex]} className="App-logo" alt="logo" />
-              {window.setInterval(() => this.plusDivs(), 4000)}
+              {window.setInterval(() => this.plusDivs(), 3000)}
               {/* <button onClick={() => this.plusDivs(1)}>Next</button> */}
             </div>
             {/* <div className="slide Fader">
