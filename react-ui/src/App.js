@@ -25,13 +25,29 @@ class App extends Component {
     };
   }
 
-   plusDivs(n) {
-    const { images } = this.state;
-    if (n > images.length) {
-      this.setState({ slideIndex: 1 });
+  plusDivs(n) {
+    const { images, slideIndex } = this.state;
+    if(n<0){
+      if(slideIndex>0){
+        this.setState((prevState)=>({
+          slideIndex : prevState.slideIndex - 1
+        }));
+      } else {
+        this.setState(()=>({
+          slideIndex:images.length-1
+        }))
+      }
     }
-    if (n < 1) {
-      this.setState({ slideIndex: images.length - 1 });      
+    if(n>0){
+      if(slideIndex<images.length-1){
+        this.setState((prevState)=>({
+          slideIndex : prevState.slideIndex +1
+        }))
+      } else {
+        this.setState(()=>({
+          slideIndex : 0
+        }))
+      }
     }
   }
   render(){
