@@ -1,3 +1,4 @@
+import React from 'react';
 // var slideIndex = 0;
 // showSlides();
 
@@ -14,6 +15,7 @@
 
 //   setTimeout(showSlides, 8000); 
 // } 
+
 
 export default function showSlides() {
   var slideIndex = 0
