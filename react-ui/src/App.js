@@ -1,67 +1,72 @@
 import trumpet from './images/trumpet.svg';
 import bass_drum from './images/bass_drum.svg';
 import guitar from './images/guitar.svg';
-import saxophone from './images/saxophone.svg';
 import './App.css';
 import React, { useState, useEffect } from 'react'
-// import React, { Component } from 'react'
-import {Helmet} from 'react-helmet';
-// import { useScript } from './hooks/useScript';
-import showSlides from './components/slide'
+import 'bootstrap/dist/css/bootstrap.min.css'
+import { Switch, Route, Link } from 'react-router-dom'
+import Login from './components/login'
+import SignUp from './components/signup'
 
+// import React, { Component } from 'react'
+
+ 
 
 function App() {
-  // useScript("./components/slide.js");
-  // var slideIndex = 0;
-  // constructor() {
-  //   super();
-  //   this.state = {
-  //     slideIndex: 1,
-  //     images: [
-  //       trumpet,
-  //       bass_drum,
-  //       guitar
-  //     ] 
-  //   };
-  // }
+    const [user, setUser] = React.useState(null);
 
-  // plusDivs() {
-  //   const { images, slideIndex } = this.state;
-  //   // if(n<0){
-  //     if(slideIndex>0){
-  //       this.setState((prevState)=>({
-  //         slideIndex : prevState.slideIndex - 1
-  //       }));
-  //     } else {
-  //       this.setState(()=>({
-  //         slideIndex:images.length-1
-  //       }))
-  //     }
- 
-  // }
-  // render(){
-  //   const { images, slideIndex } = this.state;
+    async function login(user = null) {
+      setUser(user);
+    }
+    async function logout(){
+      setUser(null);
+    }
 
     return (
+
       <div className="App"> 
       {/* {setTimeout(() => this.plusDivs(), 4000)} */}
+      <div>
+            <nav className="navbar navbar-expand navbar-dark bg-dark">
+              <a href="/" className="navbar-brand">
+                Bander
+              </a>
+              <div className="navbar-nav mr-auto">
+                <li className="nav-item">
+                  <Link to={"/home"} className="nav-link">
+                    Home
+                  </Link>
+                </li>
+                <li className="nav-item" >
+                  { user ? (
+                    <a onClick={logout} className="nav-link" style={{cursor:'pointer'}}>
+                      Logout {user.name}
+                    </a>
+                  ) : (            
+                  <Link to={"/login"} className="nav-link">
+                    Login
+                  </Link>
+                  )}
+
+                </li>
+              </div>
+            </nav>
+          </div>
 
         <header className="App-header" >
           <div>
-            <p> 
-              Bander
-            </p>
+            <p>Bander</p>
           </div>
           <div id="Fader">
             <img src={trumpet} className="App-logo" alt="logo" />
             <img src={bass_drum} className="App-logo" alt="logo" />
             <img src={guitar} className="App-logo" alt="logo" />
-
-              {/* {setTimeout(() => this.plusDivs(), 4000)} */}
-              {/* <button onClick={() => this.plusDivs(1)}>Next</button> */}
+                {/* {setTimeout(() => this.plusDivs(), 4000)} */}
+                {/* <button onClick={() => this.plusDivs(1)}>Next</button> */}
           </div>
         </header>
       </div>
+
     );
   }
 
