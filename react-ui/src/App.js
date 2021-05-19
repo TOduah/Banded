@@ -17,6 +17,11 @@ function App() {
             Bander
           </p>
         </div>
+        <Helmet>
+        <script src="./components/slide.js" type="text/jsx" />
+      </Helmet>
+      </header>
+      <body onload="showSlides();">
         <div className="Slide-container">
           <div className="slide Fader">
             <img src={trumpet} className="App-logo" alt="logo" />
@@ -29,31 +34,7 @@ function App() {
           </div>
           {/* <img src={saxophone} className="App-logo" alt="logo" /> */}
         </div>
-        <Helmet>
-        <script src="./components/slide.js" type="text/jsx" />
-      </Helmet>
-      <script>
-        {
-          `var slideIndex = 0 = 1 = u;
-          showSlides();
-          console.log("Hello");
-          
-          function showSlides() {
-            var i;
-            var slides = document.querySelectorAll(".slide");
-            for (i = 0; i < slides.length; i++) {
-              slides[i].style.display = "none";  
-            }
-            slideIndex++;
-            if (slideIndex > slides.length) {slideIndex = 1}    
-          
-            slides[slideIndex-1].style.display = "block";  
-          
-            setTimeout(showSlides, 8000); 
-          } `
-        }
-      </script>
-      </header>
+      </body>
     </div>
   );
 }
