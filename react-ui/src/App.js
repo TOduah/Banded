@@ -5,11 +5,13 @@ import saxophone from './images/saxophone.svg';
 import './App.css';
 import React, { useState, useEffect } from 'react'
 import {Helmet} from 'react-helmet';
-import { useScript } from './hooks/useScript.js';
+// import { useScript } from './hooks/useScript';
+import showSlides from './components/slide'
 
 
 function App() {
-  useScript("./components/slide.js");
+  // useScript("./components/slide.js");
+  var slideIndex = 0;
   return (
     <div className="App"> 
       <Helmet>
@@ -33,6 +35,8 @@ function App() {
           </div>
           {/* <img src={saxophone} className="App-logo" alt="logo" /> */}
         </div>
+        {slideIndex}
+        {showSlides()}
       </header>
     </div>
   );

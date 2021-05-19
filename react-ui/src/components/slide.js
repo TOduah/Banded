@@ -1,7 +1,22 @@
-var slideIndex = 0;
-showSlides();
+// var slideIndex = 0;
+// showSlides();
 
-function showSlides() {
+// function showSlides() {
+//   var i;
+//   var slides = document.querySelectorAll(".slide");
+//   for (i = 0; i < slides.length; i++) {
+//     slides[i].style.display = "none";  
+//   }
+//   slideIndex++;
+//   if (slideIndex > slides.length) {slideIndex = 1}    
+
+//   slides[slideIndex-1].style.display = "block";  
+
+//   setTimeout(showSlides, 8000); 
+// } 
+
+export default function showSlides() {
+  console.log("yes")
   var i;
   var slides = document.querySelectorAll(".slide");
   for (i = 0; i < slides.length; i++) {
@@ -12,5 +27,5 @@ function showSlides() {
 
   slides[slideIndex-1].style.display = "block";  
 
-  setTimeout(showSlides, 8000); 
-} 
+  setTimeout(showSlides, 8000);
+}
