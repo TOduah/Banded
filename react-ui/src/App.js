@@ -55,7 +55,7 @@ class App extends Component {
     var interval = window.setInterval(function(){
       this.plusDivs(1)
     }, 4000);
-    interval;
+    interval();
     return (
       <div className="App"> 
         {/* <Helmet>
