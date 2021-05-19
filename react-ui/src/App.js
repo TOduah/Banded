@@ -55,10 +55,10 @@ class App extends Component {
     // window.setInterval(() =>
     //   this.plusDivs(), 4000);
     // {interval()}
+    var myInterval
     return (
-      
       <div className="App"> 
-      {setTimeout(() => this.plusDivs(), 4000)}
+      {myInterval = setTimeout(() => this.plusDivs(), 4000)}
         {/* <Helmet>
           <script src="./components/slide.js" type="text/jsx" />
         </Helmet> */}
