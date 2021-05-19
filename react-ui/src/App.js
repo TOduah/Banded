@@ -3,8 +3,8 @@ import bass_drum from './images/bass_drum.svg';
 import guitar from './images/guitar.svg';
 import saxophone from './images/saxophone.svg';
 import './App.css';
-// import React, { useState, useEffect } from 'react'
-import React, { Component } from 'react'
+import React, { useState, useEffect } from 'react'
+// import React, { Component } from 'react'
 import {Helmet} from 'react-helmet';
 // import { useScript } from './hooks/useScript';
 import showSlides from './components/slide'
