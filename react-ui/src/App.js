@@ -61,7 +61,7 @@ class App extends Component {
             </div> */}
             {/* <img src={saxophone} className="App-logo" alt="logo" /> */}
           </div>
-          {showSlides()}
+          {/* {showSlides()} */}
         </header>
       </div>
     );
