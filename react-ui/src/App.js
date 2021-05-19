@@ -53,7 +53,7 @@ class App extends Component {
   render(){
     const { images, slideIndex } = this.state;
     window.setInterval(function(){
-      this.plusDivs(1)
+      plusDivs(1)
     }, 4000);
     // {interval()}
     return (
