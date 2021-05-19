@@ -53,9 +53,9 @@ function App() {
             </p>
           </div>
           <div className="slide Fader">
-            <img src={trumpet} className="App-logo" alt="logo" />
-            <img src={bass_drum} className="App-logo" alt="logo" />
-            <img src={guitar} className="App-logo" alt="logo" />
+            <img src={trumpet} className="App-logo" id="Fader" alt="logo" />
+            <img src={bass_drum} className="App-logo" id="Fader" alt="logo" />
+            <img src={guitar} className="App-logo" id="Fader" alt="logo" />
 
               {/* {setTimeout(() => this.plusDivs(), 4000)} */}
               {/* <button onClick={() => this.plusDivs(1)}>Next</button> */}
