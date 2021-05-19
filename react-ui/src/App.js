@@ -10,58 +10,42 @@ import {Helmet} from 'react-helmet';
 import showSlides from './components/slide'
 
 
-class App extends Component {
+function App() {
   // useScript("./components/slide.js");
   // var slideIndex = 0;
-  constructor() {
-    super();
-    this.state = {
-      slideIndex: 1,
-      images: [
-        trumpet,
-        bass_drum,
-        guitar
-      ] 
-    };
-  }
+  // constructor() {
+  //   super();
+  //   this.state = {
+  //     slideIndex: 1,
+  //     images: [
+  //       trumpet,
+  //       bass_drum,
+  //       guitar
+  //     ] 
+  //   };
+  // }
 
-  plusDivs() {
-    const { images, slideIndex } = this.state;
-    // if(n<0){
-      if(slideIndex>0){
-        this.setState((prevState)=>({
-          slideIndex : prevState.slideIndex - 1
-        }));
-      } else {
-        this.setState(()=>({
-          slideIndex:images.length-1
-        }))
-      }
-    // }
-    // if(n>0){
-    //   if(slideIndex<images.length-1){
-    //     this.setState((prevState)=>({
-    //       slideIndex : prevState.slideIndex +1
-    //     }))
-    //   } else {
-    //     this.setState(()=>({
-    //       slideIndex : 0
-    //     }))
-    //   }
-    // }
-  }
-  render(){
-    const { images, slideIndex } = this.state;
-    // window.setInterval(() =>
-    //   this.plusDivs(), 4000);
-    // {interval()}
-    var myInterval
+  // plusDivs() {
+  //   const { images, slideIndex } = this.state;
+  //   // if(n<0){
+  //     if(slideIndex>0){
+  //       this.setState((prevState)=>({
+  //         slideIndex : prevState.slideIndex - 1
+  //       }));
+  //     } else {
+  //       this.setState(()=>({
+  //         slideIndex:images.length-1
+  //       }))
+  //     }
+ 
+  // }
+  // render(){
+  //   const { images, slideIndex } = this.state;
+
     return (
       <div className="App"> 
-      {myInterval = setTimeout(() => this.plusDivs(), 4000)}
-        {/* <Helmet>
-          <script src="./components/slide.js" type="text/jsx" />
-        </Helmet> */}
+      {/* {setTimeout(() => this.plusDivs(), 4000)} */}
+
         <header className="App-header" >
           <div>
             <p> 
@@ -74,19 +58,17 @@ class App extends Component {
               {/* {setTimeout(() => this.plusDivs(), 4000)} */}
               {/* <button onClick={() => this.plusDivs(1)}>Next</button> */}
             </div>
-            {/* <div className="slide Fader">
+            <div className="slide Fader">
               <img src={bass_drum} className="App-logo" alt="logo" />
             </div>
             <div className="slide Fader">
               <img src={guitar} className="App-logo" alt="logo" />
-            </div> */}
-            {/* <img src={saxophone} className="App-logo" alt="logo" /> */}
+            </div>
           </div>
-          {/* {showSlides()} */}
         </header>
       </div>
     );
   }
-}
+
 
 export default App;
