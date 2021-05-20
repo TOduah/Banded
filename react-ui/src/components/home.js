@@ -1,11 +1,11 @@
 import React from 'react'
 
-function Login(){
+function Home(){
     return (
         <div className="App-header">
-            Page to Login.
+            Home Page to Show All Users.
         </div>
     );
 }
 
-export default Login;
+export default Home;

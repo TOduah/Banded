@@ -7,6 +7,9 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import { Switch, Route, Link } from 'react-router-dom'
 import Login from './components/login'
 import SignUp from './components/signup'
+import User from './components/user'
+import AddProfile from './components/add-profile'
+import Home from './components/home'
 
 // import React, { Component } from 'react'
 
@@ -24,7 +27,7 @@ function App() {
 
     return (
 
-      <div className="App"> 
+      <div className="App">  
       {/* {setTimeout(() => this.plusDivs(), 4000)} */}
       <div>
             <nav className="navbar navbar-expand navbar-dark bg-dark" expand="lg">
@@ -53,6 +56,29 @@ function App() {
                 </li>
               </div>
             </nav>
+            <div>
+              <Switch>
+                <Route exact path={["/home"]} component={Home} />
+                <Route 
+                  path="/home/:id/userprofile"
+                  render={(props) => (
+                    <AddProfile {...props} user={user} />
+                  )}
+                />
+                <Route 
+                  path="/users/:id"
+                  render={(props) => (
+                    <User {...props} user={user} />
+                  )}
+                />
+                <Route 
+                  path="/login"
+                  render={(props) => (
+                    <Login {...props} login={login} />
+                  )}
+                />
+              </Switch>
+            </div>
           </div>
 
         <header className="App-header" >
