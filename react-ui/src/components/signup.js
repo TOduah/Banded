@@ -4,12 +4,16 @@ import '../App.css'
 import Login from "./login";
 
 const SignUp = props => {
-    // login template. will update for signup
-    // const initialUserState = {
-    //     name: "",
-    //     password: "",
-    //     id: ""
-    //   };
+    const initialUserState = {
+        name: "",
+        password: "",
+        id: ""
+      };
+    const [user, setUser] = useState(initialUserState); //default value empty string
+    const [email, setEmail] = useState(initialUserState);
+    const [password, setPassword] = useState(initialUserState);
+    //  will update for signup
+    
     
     //   const [user, setUser] = useState(initialUserState);
     
@@ -22,8 +26,23 @@ const SignUp = props => {
     //     props.signup(user) // async function from App.js
     //     props.history.push('/login'); //update url to / route
     //   }
-    const signup = () => {
+    const signup = async() => {
         //
+        const response = await fetch('http://localhost:5000/api/v1/signup', {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                user,
+                email,
+                password
+            })
+        })
+
+        const content = await response.json();
+        console.log(content)
+        props.history.push('/login');
     }
     
        
@@ -36,9 +55,9 @@ const SignUp = props => {
                     type="text"
                     className="form-control"
                     id="name"
-                    // required
+                    required
                     // value={user.name}
-                    // onChange={handleInputChange}
+                    onChange={e => setUser(e.target.value)}
                     name="name"
                 />
                 </div>
@@ -49,9 +68,9 @@ const SignUp = props => {
                     type="text"
                     className="form-control"
                     id="email"
-                    // required
+                    required
                     // value={user.email}
-                    // onChange={handleInputChange}
+                    onChange={e => setEmail(e.target.value)}
                     name="email"
                 />
                 </div>
@@ -62,9 +81,9 @@ const SignUp = props => {
                     type="text"
                     className="form-control"
                     id="id"
-                    // required
+                    required
                     // value={user.id}
-                    // onChange={handleInputChange}
+                    onChange={e => setPassword(e.target.value)}
                     name="id"
                 />
                 </div>

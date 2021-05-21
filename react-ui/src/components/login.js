@@ -24,7 +24,8 @@ const Login = props => {
   }
 
   async function signup(user = null) {
-    setUser(user);
+    // setUser(user);
+    props.history.push('/signup');
   }
 
   return (
