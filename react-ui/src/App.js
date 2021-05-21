@@ -10,6 +10,7 @@ import SignUp from './components/signup'
 import User from './components/user'
 import AddProfile from './components/add-profile'
 import Home from './components/home'
+import Browse from './components/home'
 
 // import React, { Component } from 'react'
 
@@ -36,7 +37,7 @@ function App() {
                 Bander
               </a>
               </div>
-              <div className="navbar-nav mr-auto">
+              <div className="navbar-nav ml-auto">
                 <li className="nav-item">
                   <Link to={"/home"} className="nav-link">
                     Home
@@ -52,7 +53,6 @@ function App() {
                     Login
                   </Link>
                   )}
-
                 </li>
               </div>
             </nav>
