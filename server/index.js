@@ -77,7 +77,7 @@ if (!isDev && cluster.isMaster) {
   });
 
 //   // All remaining requests return the React app, so it can handle routing.
-  app.use("*", (req, res) => res.status(404).json({ error: "not found"}))
+  // app.use("*", (req, res) => res.status(404).json({ error: "not found"}))
 
   app.get('/', async (req, res) => {
     User.find({}).then((users) => {
