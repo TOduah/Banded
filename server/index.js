@@ -7,10 +7,6 @@
 
 // // const PORT = process.env.PORT || 3000;
 
-import path from 'path';
-import { fileURLToPath } from 'url';
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
 
 import { createRequire } from 'module';
 const require = createRequire(import.meta.url);
@@ -81,9 +77,7 @@ if (!isDev && cluster.isMaster) {
   });
 
 //   // All remaining requests return the React app, so it can handle routing.
-  app.get('*', function(request, response) {
-    response.sendFile(path.resolve(__dirname, '../react-ui/build', 'index.html'));
-  });
+  app.use("*", (req, res) => res.status(404).json({ error: "not found"}))
 
   app.get('/', async (req, res) => {
     User.find({}).then((users) => {
