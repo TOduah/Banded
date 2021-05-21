@@ -1,4 +1,6 @@
-import React, { useState } from "react";
+import React, { useState } from "react"
+import { Switch, Route, Link } from 'react-router-dom'
+import '../App.css'
 
 const Login = props => {
 
@@ -51,6 +53,11 @@ const Login = props => {
         <button onClick={login} className="btn btn-success">
           Login
         </button>
+        <div>
+        <Link to={"/signup"} className="App-link">
+                Don't have an account? Signup!
+        </Link>
+        </div>
       </div>
     </div>
   );
