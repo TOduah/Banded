@@ -8,8 +8,8 @@
 // // const PORT = process.env.PORT || 3000;
 
 
-import { createRequire } from 'module';
-const require = createRequire(import.meta.url);
+// import { createRequire } from 'module';
+// const require = createRequire(import.meta.url);
 
 const express = require('express');
 // require('./db/mongoose');
