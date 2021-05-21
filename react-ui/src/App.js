@@ -25,6 +25,9 @@ function App() {
     async function logout(){
       setUser(null);
     }
+    async function signup(user = null) {
+      setUser(user);
+    }
 
     return (
 
@@ -54,6 +57,11 @@ function App() {
                   </Link>
                   )}
                 </li>
+                <li className="nav-item">
+                  <Link to={"/signup"} className="nav-link">
+                    Sign Up
+                  </Link>
+                </li>
               </div>
             </nav>
             <div>
@@ -76,6 +84,12 @@ function App() {
                   render={(props) => (
                     <Login {...props} login={login} />
                   )}
+                />
+                <Route 
+                  exact path="/signup"
+                  render={(props) => (
+                  <SignUp {...props} signup={signup} />
+                )}
                 />
               </Switch>
             </div>
