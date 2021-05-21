@@ -30,7 +30,7 @@ let port = 3000;
 let hostname = "localhost";
 
 app.use(express.static("../react-ui/public"));
-app.use(cors());
+// app.use(cors());
 app.use(express.json());
 const isDev = process.env.NODE_ENV !== 'production';
 const PORT = process.env.PORT || 5000;
