@@ -19,12 +19,11 @@ const cors = require('cors');
 require('dotenv').config();
  
 
-// const app = express();
-const port = process.env.PORT || 5000;
+
 
 // app.use(express.json());
 
-// const express = require('express');
+
 const path = require('path');
 const cluster = require('cluster');
 const numCPUs = require('os').cpus().length;
@@ -38,7 +37,8 @@ const numCPUs = require('os').cpus().length;
 
 
 const isDev = process.env.NODE_ENV !== 'production';
-// const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 5000;
+
 
 // // Multi-process to utilize all CPU cores.
 
@@ -62,13 +62,11 @@ if (!isDev && cluster.isMaster) {
 
   app.use(express.static(path.resolve(__dirname, '../react-ui/build')));
   // app.use(express.static('../react-ui/build'));
-  app.use(express.json());
-  app.use(cors())
+  // app.use(express.json());
+  // app.use(cors())
 
   
-  app.get("*", (req, res) => {
-    res.sendFile(path.resolve(__dirname, "../react-ui/build", "index.html"));
-  });
+  
 
   const uri = process.env.BANDER_DB_URI;
   // mongoose.connect(uri, { useNewUrlParser: true, useCreateIndex: true }
@@ -86,7 +84,9 @@ if (!isDev && cluster.isMaster) {
 
 //   // All remaining requests return the React app, so it can handle routing.
   // app.use("*", (req, res) => res.status(404).json({ error: "not found"}))
-
+  app.get("*", (req, res) => {
+    res.sendFile(path.resolve(__dirname, "../react-ui/build", "index.html"));
+  });
   // app.get('/', async (req, res) => {
   //   User.find({}).then((users) => {
   //       res.send(users);
@@ -94,11 +94,8 @@ if (!isDev && cluster.isMaster) {
   //       console.log('error: ' + e);
   //   })
   // });
-//   app.listen(PORT, function () {
-//     console.error(`Node ${isDev ? 'dev server' : 'cluster worker '+process.pid}: listening on port ${PORT}`);
-//   });
-  app.listen(port, () => {
-    console.log('server is up on port ' + port);
+  app.listen(PORT, function () {
+    console.error(`Node ${isDev ? 'dev server' : 'cluster worker '+process.pid}: listening on port ${PORT}`);
   });
 }
 
