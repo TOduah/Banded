@@ -1,3 +1,6 @@
+import { createRequire } from 'module';
+const require = createRequire(import.meta.url);
+
 const mongoose = require('mongoose');
 
 const User = mongoose.model('User', {
@@ -13,4 +16,4 @@ const User = mongoose.model('User', {
     }
 });
 
-module.exports = User;
+module.exports = User; 

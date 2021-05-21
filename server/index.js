@@ -7,10 +7,16 @@
 
 // // const PORT = process.env.PORT || 3000;
 
-const express = require('express');
-require('./db/mongoose');
-const User = require('./model/user');
+import { createRequire } from 'module';
+const require = createRequire(import.meta.url);
 
+const express = require('express');
+// require('./db/mongoose');
+const mongoose = require('mongoose');
+// const User = require('./model/user');
+const cors = require('cors');
+require('dotenv').config();
+ 
 
 // const app = express();
 const port = process.env.PORT || 5000;
@@ -50,7 +56,18 @@ if (!isDev && cluster.isMaster) {
   const app = express();
 
 //   // Priority serve any static files.
-  app.use(express.static(path.resolve(__dirname, '../react-ui/build')));
+  // app.use(express.static(path.resolve(__dirname, '../react-ui/build')));
+  app.use(express.static('../react-ui/build'));
+  app.use(express.json());
+  app.use(cors())
+
+  const uri = process.env.BANDER_DB_URI;
+  mongoose.connect(uri, { useNewUrlParser: true, useCreateIndex: true }
+  );
+  const connection = mongoose.connection;
+  connection.once('open', () => {
+    console.log("MongoDB database connection established successfully");
+  })
 
   // Answer API requests.
   app.get('/api', function (req, res) {

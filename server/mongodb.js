@@ -1,23 +1,32 @@
-// import express from 'express'
-// import cors from 'cors'
-// const express = require("express");
-// // const path = require('path');
-// // const cluster = require('cluster');
-// // const numCPUs = require('os').cpus().length;
-// const axios = require("axios");
+import { createRequire } from 'module';
+const require = createRequire(import.meta.url);
 
-// const app = express();
-// let port = 3000;
-// let hostname = "localhost";
+const express = require('express');
+const cors = require('cors');
+const mongoose = require('mongoose');
 
-// app.use(express.static("../react-ui/public"));
-// app.use(cors());
-// app.use(express.json());
+require('dotenv').config();
 
-// app.use("*", (req, res) => res.status(404).jons({error: "Not found"}))
+const app = express();
+const port = process.env.PORT || 5000;
 
-// app.listen(port, hostname, () => {
-//   console.log(`Listening at: http://${hostname}:${port}`);
-// });
+app.use(cors());
+app.use(express.json());
 
-// export default app
+const uri = process.env.BANDER_DB_URI;
+mongoose.connect(uri, { useNewUrlParser: true, useCreateIndex: true }
+);
+const connection = mongoose.connection;
+connection.once('open', () => {
+  console.log("MongoDB database connection established successfully");
+})
+
+// const exercisesRouter = require('./routes/exercises');
+// const usersRouter = require('./routes/users');
+
+// app.use('/exercises', exercisesRouter);
+// app.use('/users', usersRouter);
+
+app.listen(port, () => {
+    console.log(`Server is running on port: ${port}`);
+});
