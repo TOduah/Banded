@@ -1,6 +1,8 @@
 import React, { useState } from "react"
 import { Switch, Route, Link } from 'react-router-dom'
 import '../App.css'
+import SignUp from "./signup";
+
 
 const Login = props => {
 
@@ -19,6 +21,10 @@ const Login = props => {
   const login = () => {
     props.login(user) // async function from App.js
     props.history.push('/'); //update url to / route
+  }
+
+  async function signup(user = null) {
+    setUser(user);
   }
 
   return (
@@ -58,6 +64,16 @@ const Login = props => {
                 Don't have an account? Signup!
         </Link>
         </div>
+      </div>
+      <div>
+        <Switch>
+            <Route 
+                exact path="/signup"
+                render={(props) => (
+                <SignUp {...props} signup={signup} />
+                )}
+            />
+        </Switch>
       </div>
     </div>
   );
