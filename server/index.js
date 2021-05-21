@@ -59,14 +59,15 @@ if (!isDev && cluster.isMaster) {
   const app = express();
 
 //   // Priority serve any static files.
-  // app.use(express.static(path.resolve(__dirname, '../react-ui/build')));
+
+  app.use(express.static(path.resolve(__dirname, '../react-ui/build')));
   // app.use(express.static('../react-ui/build'));
   app.use(express.json());
   app.use(cors())
 
-  app.use(express.static("build"));
+  
   app.get("*", (req, res) => {
-    res.sendFile(path.resolve(__dirname,  "build", "index.html"));
+    res.sendFile(path.resolve(__dirname, "../react-ui/build", "index.html"));
   });
 
   const uri = process.env.BANDER_DB_URI;
