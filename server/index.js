@@ -21,8 +21,8 @@ const express = require('express');
 const path = require('path');
 const cluster = require('cluster');
 const numCPUs = require('os').cpus().length;
-const cors = require("cors");
-const pool = require("./db");
+// const cors = require("cors");
+// const pool = require("./db");
 // const axios = require("axios");
 
 let app = express();
