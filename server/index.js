@@ -79,13 +79,13 @@ if (!isDev && cluster.isMaster) {
 //   // All remaining requests return the React app, so it can handle routing.
   // app.use("*", (req, res) => res.status(404).json({ error: "not found"}))
 
-  app.get('/', async (req, res) => {
-    User.find({}).then((users) => {
-        res.send(users);
-    }).catch((e) => {
-        console.log('error: ' + e);
-    })
-  });
+  // app.get('/', async (req, res) => {
+  //   User.find({}).then((users) => {
+  //       res.send(users);
+  //   }).catch((e) => {
+  //       console.log('error: ' + e);
+  //   })
+  // });
 //   app.listen(PORT, function () {
 //     console.error(`Node ${isDev ? 'dev server' : 'cluster worker '+process.pid}: listening on port ${PORT}`);
 //   });
