@@ -14,7 +14,7 @@
 const express = require('express');
 // require('./db/mongoose');
 const mongoose = require('mongoose');
-// const User = require('./model/user');
+// const User = require('./models/user');
 const cors = require('cors');
 require('dotenv').config();
  
@@ -84,8 +84,11 @@ if (!isDev && cluster.isMaster) {
 
 //   // All remaining requests return the React app, so it can handle routing.
   // app.use("*", (req, res) => res.status(404).json({ error: "not found"}))
+  // app.get("*", (req, res) => {
+  //   res.sendFile(path.resolve(__dirname, "../react-ui/build", "index.html"));
+  // });
   app.get("*", (req, res) => {
-    res.sendFile(path.resolve(__dirname, "../react-ui/build", "index.html"));
+    res.sendFile(path.resolve(__dirname, "../react-ui/public", "index.html"));
   });
   // app.get('/', async (req, res) => {
   //   User.find({}).then((users) => {
@@ -94,6 +97,13 @@ if (!isDev && cluster.isMaster) {
   //       console.log('error: ' + e);
   //   })
   // });
+
+  const bandsRouter = require('./routes/bands');
+  const usersRouter = require('./routes/users');
+
+  app.use('/bands', bandsRouter);
+  app.use('/users', usersRouter);
+
   app.listen(PORT, function () {
     console.error(`Node ${isDev ? 'dev server' : 'cluster worker '+process.pid}: listening on port ${PORT}`);
   });
