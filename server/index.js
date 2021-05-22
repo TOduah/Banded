@@ -62,8 +62,8 @@ if (!isDev && cluster.isMaster) {
 
   app.use(express.static(path.resolve(__dirname, '../react-ui/build')));
   // app.use(express.static('../react-ui/build'));
-  // app.use(express.json());
-  // app.use(cors())
+  app.use(express.json());
+  app.use(cors())
 
   
   
