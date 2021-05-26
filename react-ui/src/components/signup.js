@@ -30,7 +30,7 @@ const SignUp = props => {
         //
         e.preventDefault();
         try {
-            const response = await fetch('/add', {
+            const response = await fetch('/users/add', {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
