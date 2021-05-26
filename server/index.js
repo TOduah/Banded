@@ -108,7 +108,7 @@ if (!isDev && cluster.isMaster) {
   app.use('/users', usersRouter);
   
 
-  app.listen(PORT, hostname, () => {
+  app.listen(PORT, function () {
     console.error(`Node ${isDev ? 'dev server' : 'cluster worker '+process.pid}: listening on port ${PORT}`);
   });
 }
