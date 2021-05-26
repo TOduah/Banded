@@ -20,7 +20,7 @@ const Login = props => {
 
   const login = () => {
     props.login(user) // async function from App.js
-    props.history.push('/'); //update url to / route
+    props.history.push('/home'); //update url to /home route
   }
 
   async function signup(user = null) {

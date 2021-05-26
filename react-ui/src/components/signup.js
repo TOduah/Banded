@@ -26,25 +26,28 @@ const SignUp = props => {
     //     props.signup(user) // async function from App.js
     //     props.history.push('/login'); //update url to / route
     //   }
-    const signup = async() => {
+    const signup = async (e) => {
         //
-        const response = await fetch('http://localhost:5000/api/v1/signup', {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({
-                user,
-                email,
-                password
-            })
-        })
-
-        const content = await response.json();
-        console.log(content)
+        e.preventDefault();
+        try {
+            const response = await fetch('/add', {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    user,
+                    email,
+                    password
+                })
+            });
+        } catch (error) {
+            console.log(error.message);
+        }
+        
         props.history.push('/login');
     }
-    
+     
        
     return (
         <div className="App-header">

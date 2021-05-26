@@ -10,11 +10,14 @@ import SignUp from './components/signup'
 import User from './components/user'
 import AddProfile from './components/add-profile'
 import Home from './components/home'
-import Browse from './components/home'
+// import Browse from './components/home'
 
 // import React, { Component } from 'react'
 
- 
+import BandsList from "./components/bands-list.component";
+import EditBand from "./components/edit-band.component";
+import CreateBand from "./components/create-band.component";
+import CreateUser from "./components/create-user.component"; 
 
 function App() {
     const [user, setUser] = React.useState(null);

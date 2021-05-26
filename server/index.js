@@ -37,7 +37,9 @@ const numCPUs = require('os').cpus().length;
 
 
 const isDev = process.env.NODE_ENV !== 'production';
-const PORT = process.env.PORT || 5000;
+// const PORT = process.env.PORT || 3000;
+const PORT = 3000;
+let hostname = "localhost";
 
 
 // // Multi-process to utilize all CPU cores.
@@ -101,10 +103,12 @@ if (!isDev && cluster.isMaster) {
   const bandsRouter = require('./routes/bands');
   const usersRouter = require('./routes/users');
 
+  app.use(express.urlencoded({ extended: false }));
   app.use('/bands', bandsRouter);
   app.use('/users', usersRouter);
+  
 
-  app.listen(PORT, function () {
+  app.listen(PORT, hostname, () => {
     console.error(`Node ${isDev ? 'dev server' : 'cluster worker '+process.pid}: listening on port ${PORT}`);
   });
 }
