@@ -14,6 +14,11 @@ const saltRounds = 10;
 //     }
 // });
 
+mongoose.connect(process.env.BANDER_DB_URI, {
+    useNewUrlParser: true,
+    useCreateIndex: true
+})
+
 const Schema = mongoose.Schema;
 const userSchema = new Schema({
     username: {

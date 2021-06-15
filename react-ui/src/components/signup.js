@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { Switch, Route, Link } from 'react-router-dom'
 import '../App.css'
 import Login from "./login";
+import axios from 'axios'
 
 const SignUp = props => {
     const initialUserState = {
@@ -29,21 +30,29 @@ const SignUp = props => {
     const signup = async (e) => {
         //
         e.preventDefault();
-        try {
-            const response = await fetch('/users/add', {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify({
-                    user,
-                    email,
-                    password
-                })
-            });
-        } catch (error) {
-            console.log(error.message);
+        // try {
+        //     const response = await fetch('/users/add', {
+        //         method: "POST",
+        //         headers: {
+        //             "Content-Type": "application/json"
+        //         },
+        //         body: JSON.stringify({
+        //             user,
+        //             email,
+        //             password
+        //         })
+        //     });
+        // } catch (error) {
+        //     console.log(error.message);
+        // }
+
+        const user_data = {
+            username: user,
+            email: email,
+            password: password
         }
+        axios.post('http://localhost:5000/users/add', user_data)
+            .then(res => console.log(res.data));
         
         props.history.push('/login');
     }
@@ -96,7 +105,7 @@ const SignUp = props => {
                 </button>
                 <div>
                 <Link to={"/login"} className="App-link">
-                        Login!
+                        Already have an account? Login!
                 </Link>
                 </div>
             </div>

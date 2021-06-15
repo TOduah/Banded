@@ -37,8 +37,8 @@ const numCPUs = require('os').cpus().length;
 
 
 const isDev = process.env.NODE_ENV !== 'production';
-const PORT = process.env.PORT || 3000;
-// const PORT = 3000;
+const PORT = process.env.PORT || 5000;
+// const PORT = 3000; 
 let hostname = "localhost";
 
 
@@ -71,7 +71,7 @@ if (!isDev && cluster.isMaster) {
   
 
   const uri = process.env.BANDER_DB_URI;
-  mongoose.connect(uri, { useNewUrlParser: true, useCreateIndex: true }
+  mongoose.connect(uri, { useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true}
   );
   const connection = mongoose.connection;
   connection.once('open', () => {
@@ -103,9 +103,19 @@ if (!isDev && cluster.isMaster) {
   const bandsRouter = require('./routes/bands');
   const usersRouter = require('./routes/users');
 
-  app.use(express.urlencoded({ extended: false }));
+  // app.use(express.urlencoded({ extended: false }));
   app.use('/bands', bandsRouter);
   app.use('/users', usersRouter);
+
+  app.post('/add',(req, res) => {
+    const username = req.body.username;
+    const email = req.body.email;
+    const password = req.body.password;
+    const newUser = new User({username, email, password});
+    newUser.save()
+      .then(() => res.json('User added!'))
+      .catch(err => res.status(400).json('Error: ' + err));
+  });
   
 
   app.listen(PORT, function () {
