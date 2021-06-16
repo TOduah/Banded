@@ -103,7 +103,7 @@ if (!isDev && cluster.isMaster) {
   const bandsRouter = require('./routes/bands');
   const usersRouter = require('./routes/users');
 
-  app.use(express.urlencoded({ extended: false }));
+  app.use(express.urlencoded({ extended: true }));
   app.use('/bands', bandsRouter);
   app.use('/users', usersRouter);
 
