@@ -51,7 +51,7 @@ const SignUp = props => {
             email: email,
             password: password
         }
-        axios.post('https://bander.live/users/add', user_data, 
+        axios.post('http://localhost:5000/users/add', user_data, 
         {
             headers: {'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'}
         })

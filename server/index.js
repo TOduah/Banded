@@ -68,9 +68,6 @@ if (!isDev && cluster.isMaster) {
   // app.use(express.static('../react-ui/build'));
   app.use(express.json());
   app.use(cors());
-  app.use(express.urlencoded());
-
-  
   
 
   const uri = process.env.BANDER_DB_URI;
@@ -106,19 +103,19 @@ if (!isDev && cluster.isMaster) {
   const bandsRouter = require('./routes/bands');
   const usersRouter = require('./routes/users');
 
-  // app.use(express.urlencoded({ extended: false }));
+  app.use(express.urlencoded({ extended: false }));
   app.use('/bands', bandsRouter);
   app.use('/users', usersRouter);
 
-  app.post('/add',(req, res) => {
-    const username = req.body.username;
-    const email = req.body.email;
-    const password = req.body.password;
-    const newUser = new User({username, email, password});
-    newUser.save()
-      .then(() => res.json('User added!'))
-      .catch(err => res.status(400).json('Error: ' + err));
-  });
+  // app.post('/add',(req, res) => {
+  //   const username = req.body.username;
+  //   const email = req.body.email;
+  //   const password = req.body.password;
+  //   const newUser = new User({username, email, password});
+  //   newUser.save()
+  //     .then(() => res.json('User added!'))
+  //     .catch(err => res.status(400).json('Error: ' + err));
+  // });
   
 
   app.listen(PORT, function () {
