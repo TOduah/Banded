@@ -51,7 +51,7 @@ const SignUp = props => {
             email: email,
             password: password
         }
-        axios.post('http://localhost:5000/users/add', user_data)
+        axios.post('https://bander.live/users/add', user_data)
             .then(res => console.log(res.data));
         
         props.history.push('/login');
