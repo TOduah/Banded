@@ -16,6 +16,8 @@ const express = require('express');
 const mongoose = require('mongoose');
 // const User = require('./models/user');
 const cors = require('cors');
+const bodyParser = require('body-parser');
+
 require('dotenv').config();
  
 
@@ -65,7 +67,8 @@ if (!isDev && cluster.isMaster) {
   app.use(express.static(path.resolve(__dirname, '../react-ui/build')));
   // app.use(express.static('../react-ui/build'));
   app.use(express.json());
-  app.use(cors())
+  app.use(cors());
+  app.use(express.urlencoded());
 
   
   
