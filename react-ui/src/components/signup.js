@@ -51,8 +51,12 @@ const SignUp = props => {
             email: email,
             password: password
         }
-        axios.post('https://bander.live/users/add', user_data)
-            .then(res => console.log(res.data));
+        axios.post('https://bander.live/users/add', user_data, 
+        {
+            headers: {'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'}
+        })
+            .then(res => console.log(res.data))
+            .catch(err => {console.log(err.response)});
         
         props.history.push('/login');
     }
