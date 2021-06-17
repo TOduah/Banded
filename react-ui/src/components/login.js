@@ -56,10 +56,11 @@ const Login = props => {
             name="id"
           />
         </div>
-
-        <button onClick={login} className="btn btn-success">
-          Login
-        </button>
+        <div className="text-center mt-3">
+          <button onClick={login} className="btn btn-success">
+            Login
+          </button>
+        </div>
         <div>
         <Link to={"/signup"} className="App-link">
                 Don't have an account? Signup!

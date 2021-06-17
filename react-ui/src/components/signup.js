@@ -13,6 +13,9 @@ const SignUp = props => {
     const [user, setUser] = useState(initialUserState); //default value empty string
     const [email, setEmail] = useState(initialUserState);
     const [password, setPassword] = useState(initialUserState);
+    const [userError, setUserError] = useState(null);
+    const [emailError, setEmailError] = useState(null);
+    const [passwordError, setPasswordError] = useState(null);
     //  will update for signup
     
     
@@ -45,17 +48,29 @@ const SignUp = props => {
         // } catch (error) {
         //     console.log(error.message);
         // }
-
-        const user_data = {
-            username: user,
-            email: email,
-            password: password
+        if (user.length < 3){
+            setUserError('username must be 3 or more characters long');
         }
-        axios.post('https://bander.live/users/add', user_data)
-            .then(res => console.log(res.data))
-            .catch(err => {console.log(err.response)});
-        
-        props.history.push('/login');
+        if (password.length < 3){
+            setPasswordError('password must be 3 or more characters long');
+        }
+        let re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        if(!re.test(email)){
+            setEmailError('not a valid email');
+        }
+
+        else{
+            const user_data = {
+                username: user,
+                email: email,
+                password: password
+            }
+            axios.post('https://bander.live/users/add', user_data)
+                .then(res => console.log(res.data))
+                .catch(err => {console.log(err.response)});
+            
+            props.history.push('/login');
+        }
     }
      
        
@@ -73,12 +88,14 @@ const SignUp = props => {
                     onChange={e => setUser(e.target.value)}
                     name="name"
                 />
+                <div style={{"color":'red'}}>{userError}</div>
                 </div>
+                
 
                 <div className="form-group">
                 <label htmlFor="user">Email</label>
                 <input
-                    type="text"
+                    type="email"
                     className="form-control"
                     id="email"
                     required
@@ -86,7 +103,9 @@ const SignUp = props => {
                     onChange={e => setEmail(e.target.value)}
                     name="email"
                 />
+                <div style={{"color":'red'}}>{emailError}</div>
                 </div>
+                
 
                 <div className="form-group">
                 <label htmlFor="id">Password</label>
@@ -99,11 +118,14 @@ const SignUp = props => {
                     onChange={e => setPassword(e.target.value)}
                     name="id"
                 />
+                <div style={{"color":'red'}}>{passwordError}</div>
                 </div>
-
-                <button onClick={signup} className="btn btn-success">
-                    Sign Up
-                </button>
+                
+                <div className="text-center mt-3">
+                    <button onClick={signup} className="btn btn-success">
+                        Sign Up
+                    </button>
+                </div>
                 <div>
                 <Link to={"/login"} className="App-link">
                         Already have an account? Login!
